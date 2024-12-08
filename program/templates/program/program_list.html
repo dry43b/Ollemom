@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>프로그램</title>
+</head>
+<body>
+    <h1>Program</h1>
+
+    {% for p in program_list %}
+        <hr/>
+        <h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
+        <h3>{{ p.created_at }}</h3>
+        <p>{{ p.description }}</p>
+    {% endfor %}
+</body>
+</html>
